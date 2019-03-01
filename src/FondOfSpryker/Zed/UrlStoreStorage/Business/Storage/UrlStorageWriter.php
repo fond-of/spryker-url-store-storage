@@ -17,8 +17,6 @@ use Spryker\Zed\UrlStorage\Business\Storage\UrlStorageWriter as SprykerUrlStorag
 
 class UrlStorageWriter extends SprykerUrlStorageWriter
 {
-    use LoggerTrait;
-
     /**
      * @param \Generated\Shared\Transfer\UrlStorageTransfer $urlStorageTransfer
      * @param \Orm\Zed\UrlStorage\Persistence\SpyUrlStorage|null $urlStorageEntity

@@ -12,8 +12,6 @@ use Spryker\Zed\UrlStorage\Business\UrlStorageBusinessFactory as SprykerUrlStora
  */
 class UrlStoreStorageBusinessFactory extends SprykerUrlStorageBusinessFactory
 {
-    use LoggerTrait;
-
     /**
      * @return \Spryker\Zed\UrlStorage\Business\Storage\UrlStorageWriterInterface
      */

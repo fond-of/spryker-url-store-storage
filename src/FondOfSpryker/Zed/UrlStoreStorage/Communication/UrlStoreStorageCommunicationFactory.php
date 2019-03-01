@@ -9,4 +9,5 @@ use Spryker\Zed\UrlStorage\Communication\UrlStorageCommunicationFactory as Spryk
 
 class UrlStoreStorageCommunicationFactory extends SprykerUrlStorageCommunicationFactory
 {
+
 }
