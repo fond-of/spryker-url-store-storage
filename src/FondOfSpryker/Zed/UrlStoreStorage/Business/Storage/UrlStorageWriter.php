@@ -56,13 +56,6 @@ class UrlStorageWriter extends SprykerUrlStorageWriter
             $urlStorageEntity->setStore($storeName);
         }
 
-        $resource = $this->findResourceArguments($urlStorageTransfer->toArray());
-
-        $urlStorageEntity->setByName('fk_' . $resource[static::RESOURCE_TYPE], $resource[static::RESOURCE_VALUE]);
-        $urlStorageEntity->setUrl($urlStorageTransfer->getUrl());
-        $urlStorageEntity->setFkUrl($urlStorageTransfer->getIdUrl());
-        $urlStorageEntity->setData($urlStorageTransfer->modifiedToArray());
-        $urlStorageEntity->setIsSendingToQueue($this->isSendingToQueue);
-        $urlStorageEntity->save();
+        parent::storeDataSet($urlStorageTransfer, $urlStorageEntity);
     }
 }
