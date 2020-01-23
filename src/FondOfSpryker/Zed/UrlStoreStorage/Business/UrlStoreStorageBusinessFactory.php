@@ -8,10 +8,14 @@ use Spryker\Shared\Log\LoggerTrait;
 use FondOfSpryker\Zed\UrlStoreStorage\Business\Storage\UrlStorageWriter;
 use Spryker\Zed\Store\Business\StoreFacadeInterface;
 use Spryker\Zed\UrlStorage\Business\UrlStorageBusinessFactory as SprykerUrlStorageBusinessFactory;
+use Spryker\Zed\UrlStorage\Dependency\Facade\UrlStorageToStoreFacadeInterface;
+use Spryker\Zed\UrlStorage\UrlStorageDependencyProvider;
 
 /**
  * @method \FondOfSpryker\Zed\UrlStoreStorage\UrlStorageConfig getConfig()
- * @method \Spryker\Zed\UrlStorage\Persistence\UrlStorageQueryContainerInterface getQueryContainer()
+ * @method \FondOfSpryker\Zed\UrlStoreStorage\Persistence\UrlStorageQueryContainerInterface getQueryContainer()
+ * @method \FondOfSpryker\Zed\UrlStoreStorage\Persistence\UrlStorageRepositoryInterface getRepository()
+ * @method \FondOfSpryker\Zed\UrlStoreStorage\Persistence\UrlStoreStorageEntityManagerInterface getEntityManager()()
  */
 class UrlStoreStorageBusinessFactory extends SprykerUrlStorageBusinessFactory
 {
@@ -29,12 +33,10 @@ class UrlStoreStorageBusinessFactory extends SprykerUrlStorageBusinessFactory
     }
 
     /**
-     * @throws
-     *
-     * @return \Spryker\Zed\Store\Business\StoreFacadeInterface
+     * @return \Spryker\Zed\UrlStorage\Dependency\Facade\UrlStorageToStoreFacadeInterface
      */
-    protected function getStoreFacade(): StoreFacadeInterface
+    public function getStoreFacade(): UrlStorageToStoreFacadeInterface
     {
-        return $this->getProvidedDependency(UrlStoreStorageDependencyProvider::FACADE_STORE);
+        return $this->getProvidedDependency(UrlStorageDependencyProvider::FACADE_STORE);
     }
 }
