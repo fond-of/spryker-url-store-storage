@@ -3,12 +3,10 @@
 namespace FondOfSpryker\Zed\UrlStoreStorage\Business;
 
 use Codeception\Test\Unit;
-use FondOfSpryker\Zed\UrlStoreStorage\Business\Storage\UrlStorageWriter;
 use org\bovigo\vfs\vfsStream;
 
 class UrlStoreStorageFacadeTest extends Unit
 {
-
     /**
      * @var \org\bovigo\vfs\vfsStreamDirectory
      */
@@ -29,11 +27,13 @@ class UrlStoreStorageFacadeTest extends Unit
         ]);
     }
 
+    /**
+     * @return void
+     */
     public function testPublishUrl()
     {
         $urlStoreStorageFacade = new UrlStoreStorageFacade();
 
         //$urlStoreStorageFacade->publishUrl([]);
-
     }
 }

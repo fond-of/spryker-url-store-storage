@@ -2,7 +2,6 @@
 
 namespace FondOfSpryker\Zed\UrlStoreStorage\Business;
 
-use Spryker\Shared\Log\LoggerTrait;
 use Spryker\Zed\UrlStorage\Business\UrlStorageFacade as SprykerUrlStorageFacade;
 
 /**
@@ -11,7 +10,7 @@ use Spryker\Zed\UrlStorage\Business\UrlStorageFacade as SprykerUrlStorageFacade;
 class UrlStoreStorageFacade extends SprykerUrlStorageFacade implements UrlStoreStorageFacadeInterface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *

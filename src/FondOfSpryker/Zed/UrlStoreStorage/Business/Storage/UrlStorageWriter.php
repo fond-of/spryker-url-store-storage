@@ -2,31 +2,21 @@
 
 namespace FondOfSpryker\Zed\UrlStoreStorage\Business\Storage;
 
-use ArrayObject;
 use Generated\Shared\Transfer\UrlStorageTransfer;
-use Orm\Zed\Store\Persistence\SpyStoreQuery;
-use Orm\Zed\Url\Persistence\SpyUrlQuery;
 use Orm\Zed\UrlStorage\Persistence\SpyUrlStorage;
-use Spryker\Shared\Log\LoggerTrait;
 use Spryker\Zed\Store\Business\StoreFacadeInterface;
-use Spryker\Zed\Url\Persistence\Propel\AbstractSpyUrl;
-use Spryker\Zed\UrlStorage\Business\Exception\MissingResourceException;
+use Spryker\Zed\UrlStorage\Business\Storage\UrlStorageWriter as SprykerUrlStorageWriter;
 use Spryker\Zed\UrlStorage\Dependency\Service\UrlStorageToUtilSanitizeServiceInterface;
 use Spryker\Zed\UrlStorage\Persistence\UrlStorageQueryContainerInterface;
 
-use Spryker\Zed\UrlStorage\Business\Storage\UrlStorageWriter as SprykerUrlStorageWriter;
-
 class UrlStorageWriter extends SprykerUrlStorageWriter
 {
-
     /**
      * @var \Spryker\Zed\Store\Business\StoreFacadeInterface
      */
     protected $storeFacade;
 
     /**
-     * UrlStorageWriter constructor.
-     *
      * @param \Spryker\Zed\UrlStorage\Dependency\Service\UrlStorageToUtilSanitizeServiceInterface $utilSanitize
      * @param \Spryker\Zed\UrlStorage\Persistence\UrlStorageQueryContainerInterface $queryContainer
      * @param $isSendingToQueue

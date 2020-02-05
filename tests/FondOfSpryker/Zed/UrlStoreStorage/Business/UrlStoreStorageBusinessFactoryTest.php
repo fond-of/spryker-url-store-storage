@@ -38,5 +38,4 @@ class UrlStoreStorageBusinessFactoryTest extends Unit
 
         $this->assertInstanceOf(UrlStorageWriter::class, $urlStorageWriter);
     }
-
 }

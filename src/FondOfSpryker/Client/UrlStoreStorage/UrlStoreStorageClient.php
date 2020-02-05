@@ -10,7 +10,7 @@ use Spryker\Client\UrlStorage\UrlStorageClient as SprykerUrlStorageClient;
 class UrlStoreStorageClient extends SprykerUrlStorageClient
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *

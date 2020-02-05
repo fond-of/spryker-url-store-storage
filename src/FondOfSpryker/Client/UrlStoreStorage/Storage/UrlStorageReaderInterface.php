@@ -6,5 +6,4 @@ use Spryker\Client\UrlStorage\Storage\UrlStorageReaderInterface as SprykerUrlSto
 
 interface UrlStorageReaderInterface extends SprykerUrlStorageReaderInterface
 {
-
 }

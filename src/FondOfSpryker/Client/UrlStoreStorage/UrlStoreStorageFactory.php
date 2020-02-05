@@ -18,5 +18,4 @@ class UrlStoreStorageFactory extends SprykerUrlStorageFactory
             $this->getUrlStorageResourceMapperPlugins()
         );
     }
-
 }

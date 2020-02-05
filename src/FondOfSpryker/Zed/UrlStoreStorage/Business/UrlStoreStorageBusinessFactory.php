@@ -2,11 +2,7 @@
 
 namespace FondOfSpryker\Zed\UrlStoreStorage\Business;
 
-use FondOfSpryker\Zed\CategoryExtendStorage\CategoryExtendStorageDependencyProvider;
-use FondOfSpryker\Zed\UrlStoreStorage\UrlStoreStorageDependencyProvider;
-use Spryker\Shared\Log\LoggerTrait;
 use FondOfSpryker\Zed\UrlStoreStorage\Business\Storage\UrlStorageWriter;
-use Spryker\Zed\Store\Business\StoreFacadeInterface;
 use Spryker\Zed\UrlStorage\Business\UrlStorageBusinessFactory as SprykerUrlStorageBusinessFactory;
 use Spryker\Zed\UrlStorage\Dependency\Facade\UrlStorageToStoreFacadeInterface;
 use Spryker\Zed\UrlStorage\UrlStorageDependencyProvider;

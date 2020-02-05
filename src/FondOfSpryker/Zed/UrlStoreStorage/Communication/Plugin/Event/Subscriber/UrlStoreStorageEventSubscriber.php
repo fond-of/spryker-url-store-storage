@@ -7,7 +7,6 @@ use Spryker\Zed\Event\Dependency\EventCollectionInterface;
 use Spryker\Zed\Url\Dependency\UrlEvents;
 use Spryker\Zed\UrlStorage\Communication\Plugin\Event\Subscriber\UrlStorageEventSubscriber as SprykerUrlStorageEventSubscriber;
 
-
 class UrlStoreStorageEventSubscriber extends SprykerUrlStorageEventSubscriber
 {
     /**

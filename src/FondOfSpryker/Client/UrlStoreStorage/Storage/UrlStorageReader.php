@@ -3,10 +3,8 @@
 namespace FondOfSpryker\Client\UrlStoreStorage\Storage;
 
 use Generated\Shared\Transfer\SynchronizationDataTransfer;
-use Generated\Shared\Transfer\UrlStorageTransfer;
-use Spryker\Client\UrlStorage\Dependency\Client\UrlStorageToStorageInterface;
-use Spryker\Shared\Kernel\Store;
 use Spryker\Client\UrlStorage\Storage\UrlStorageReader as SprykerUrlStorageReader;
+use Spryker\Shared\Kernel\Store;
 
 class UrlStorageReader extends SprykerUrlStorageReader implements UrlStorageReaderInterface
 {

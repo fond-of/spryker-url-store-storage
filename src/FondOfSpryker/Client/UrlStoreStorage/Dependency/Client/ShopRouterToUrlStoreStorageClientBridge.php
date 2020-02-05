@@ -25,7 +25,7 @@ class ShopRouterToUrlStoreStorageClientBridge extends SprykerShopRouterToUrlStor
      *
      * @return array
      */
-    public function matchUrl($url,$localeName)
+    public function matchUrl($url, $localeName)
     {
         return $this->urlStorageClient->matchUrl($url, $localeName);
     }
