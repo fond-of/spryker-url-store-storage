@@ -1,0 +1,9 @@
+<?php
+
+namespace FondOfSpryker\Client\UrlStoreStorage\Dependency\Client;
+
+use SprykerShop\Yves\StorageRouter\Dependency\Client\StorageRouterToUrlStorageClientBridge as SprykerStorageRouterToUrlStorageClientBridge;
+
+class StorageRouterToUrlStorageClientBridge extends SprykerStorageRouterToUrlStorageClientBridge implements StorageRouterToUrlStorageClientInterface
+{
+}

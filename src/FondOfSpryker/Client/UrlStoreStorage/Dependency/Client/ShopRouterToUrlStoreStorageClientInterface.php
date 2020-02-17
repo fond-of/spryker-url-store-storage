@@ -1,9 +1,0 @@
-<?php
-
-namespace FondOfSpryker\Client\UrlStoreStorage\Dependency\Client;
-
-use SprykerShop\Yves\ShopRouter\Dependency\Client\ShopRouterToUrlStorageClientInterface as SprykerShopRouterToUrlStorageClientInterface;
-
-interface ShopRouterToUrlStoreStorageClientInterface extends SprykerShopRouterToUrlStorageClientInterface
-{
-}

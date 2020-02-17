@@ -18,21 +18,14 @@ class UrlStoreStorageBusinessFactory extends SprykerUrlStorageBusinessFactory
     /**
      * @return \FondOfSpryker\Zed\UrlStoreStorage\Business\Storage\UrlStorageWriter|\Spryker\Zed\UrlStorage\Business\Storage\UrlStorageWriterInterface
      */
-    public function createUrlStorageWriter(): UrlStorageWriter
+    public function createUrlStorageWriter()
     {
         return new UrlStorageWriter(
             $this->getUtilSanitizeService(),
-            $this->getQueryContainer(),
-            $this->getConfig()->isSendingToQueue(),
-            $this->getStoreFacade()
+            $this->getRepository(),
+            $this->getEntityManager(),
+            $this->getStoreFacade(),
+            $this->getConfig()->isSendingToQueue()
         );
-    }
-
-    /**
-     * @return \Spryker\Zed\UrlStorage\Dependency\Facade\UrlStorageToStoreFacadeInterface
-     */
-    public function getStoreFacade(): UrlStorageToStoreFacadeInterface
-    {
-        return $this->getProvidedDependency(UrlStorageDependencyProvider::FACADE_STORE);
     }
 }
