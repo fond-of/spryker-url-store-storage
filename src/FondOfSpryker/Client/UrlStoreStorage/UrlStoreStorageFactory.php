@@ -15,6 +15,7 @@ class UrlStoreStorageFactory extends SprykerUrlStorageFactory
         return new UrlStorageReader(
             $this->getStorageClient(),
             $this->getSynchronizationService(),
+            $this->getUtilEncodingService(),
             $this->getUrlStorageResourceMapperPlugins()
         );
     }
