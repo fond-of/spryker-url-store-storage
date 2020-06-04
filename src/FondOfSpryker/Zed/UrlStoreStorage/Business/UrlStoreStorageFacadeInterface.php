@@ -6,4 +6,14 @@ use Spryker\Zed\UrlStorage\Business\UrlStorageFacadeInterface as SprykerUrlStora
 
 interface UrlStoreStorageFacadeInterface extends SprykerUrlStorageFacadeInterface
 {
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @param array $urlIds
+     *
+     * @return void
+     */
+    public function publishUrl(array $urlIds);
 }

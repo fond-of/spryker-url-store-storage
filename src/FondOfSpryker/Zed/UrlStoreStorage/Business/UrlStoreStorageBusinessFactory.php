@@ -8,9 +8,9 @@ use Spryker\Zed\UrlStorage\Dependency\Facade\UrlStorageToStoreFacadeInterface;
 use Spryker\Zed\UrlStorage\UrlStorageDependencyProvider;
 
 /**
- * @method \FondOfSpryker\Zed\UrlStoreStorage\UrlStorageConfig getConfig()
- * @method \FondOfSpryker\Zed\UrlStoreStorage\Persistence\UrlStorageQueryContainerInterface getQueryContainer()
- * @method \FondOfSpryker\Zed\UrlStoreStorage\Persistence\UrlStorageRepositoryInterface getRepository()
+ * @method \FondOfSpryker\Zed\UrlStoreStorage\UrlStoreStorageConfig getConfig()
+ * @method \FondOfSpryker\Zed\UrlStoreStorage\Persistence\UrlStoreStorageQueryContainerInterface getQueryContainer()
+ * @method \FondOfSpryker\Zed\UrlStoreStorage\Persistence\UrlStoreStorageRepositoryInterface getRepository()
  * @method \FondOfSpryker\Zed\UrlStoreStorage\Persistence\UrlStoreStorageEntityManagerInterface getEntityManager()()
  */
 class UrlStoreStorageBusinessFactory extends SprykerUrlStorageBusinessFactory
