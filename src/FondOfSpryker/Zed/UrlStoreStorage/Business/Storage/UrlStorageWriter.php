@@ -15,7 +15,8 @@ class UrlStorageWriter extends SprykerUrlStorageWriter
      */
     public function publish(array $urlIds)
     {
-        $currentStore = $this->storeFacade->getCurrentStore();
+        $stores = $this->storeFacade->getAllStores();
+        $currentStore = array_filter($stores, fn ($store) => $store->getName() === APPLICATION_STORE)[0];
         $localeNames = $currentStore->getAvailableLocaleIsoCodes();
         $urlEntityTransfers = $this->urlStorageRepository->findLocalizedUrlsByUrlIdsAndStore($urlIds, $localeNames, $currentStore);
         $urlStorageTransfers = $this->mapUrlsEntitiesToUrlStorageTransfers($urlEntityTransfers);
@@ -33,7 +34,9 @@ class UrlStorageWriter extends SprykerUrlStorageWriter
     protected function storeDataSet(UrlStorageTransfer $urlStorageTransfer, ?SpyUrlStorage $urlStorageEntity = null): void
     {
         if ($urlStorageEntity === null) {
-            $storeName = $this->storeFacade->getCurrentStore()->getName();
+            $stores = $this->storeFacade->getAllStores();
+            $currentStore = array_filter($stores, fn ($store) => $store->getName() === APPLICATION_STORE)[0];
+            $storeName = $currentStore->getName();
             $urlStorageEntity = new SpyUrlStorage();
             $urlStorageEntity->setStore($storeName);
         }
